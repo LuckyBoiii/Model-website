@@ -10,55 +10,158 @@
     <script src="code.js"></script>
 </head>
 <body>
+
     <div id="header">
-        <div class="headerLogo">
-            <img src="images/iconmonstr-cube-9.svg" id="logo">
-            <p>CubeModels</p>
-        </div>
-        <div class="rightText">
-            <p>Cart</p>
-            <p>Models</p>
+        <div class="innerHeader">
+            <div class="logoContainer">
+                <img src="images/logo.png" class="logo">
+            </div> 
+            <nav class="navigationContainer">
+                <a href="#productPage" style="color: black;" class="nav2">About</a>
+                <a href="#contactPage" style="color: black;" class="nav3">Contact</a>
+                <i style="color: black;" class="nav4" id="cart-icon" onclick="openCart(), updateTotal()"><img src="images/cart.png" style="height: 35px;"></i>
+            </nav>
         </div>
     </div>
 
+    <div id="cart">
+        <div class="closeCartDiv">
+            <i id="closeCart"><img src="images/close.png"  onclick="closeCart()" class="closeIcon"></i>
+        </div>
+        <div class="cartTitle">
+            <h1>Your Cart</h1>
+        </div>
+        <div class="cartContent"> 
+        </div>
+        <div class="total">
+            <div class="totalTitle" id="totalPrice">Total</div>
+            <div class="totalPrice">$0</div>
+        </div>
+        <button type="button" class="btnBuy">Buy Now</button>
+    </div>
+    
     <div class="p1Container">
         <div class="p1Buttons">
-            <button class="button1">Browse models</button>
+            <nav>
+                <a href="#productPage" class="button1" style="color: black;">Browse models</a>
+            </nav>
+            
         </div>
     </div>
 
     <div class="p2Container">
         <div class="p2Items">
             <h3 class="p2Text">Proffessionally made<br><span>3D-Models</span></h3>
-            <button class="button2">Browse models</button>
+            <a href="#productPage" class="button2" style="color: white;">Browse models</a>
         </div>
     </div>
 
     <div class="p3Container">
-        <div class="p3Blackground">
-            <div class="p3Items">
-                <div class="product">
-                    <img src="images/armborstPic.jpg" class="itemPic">
-                    <p>item</p>
-                    <button class="shopButton">Buy</button>
-                </div> 
-                <div class="product">
-                    <p>item</p>
-                </div> 
-                <div class="product">
-                    <p>item</p>
-                </div> 
-                <div class="product">
-                    <p>item</p>
-                </div> 
-                <div class="product">
-                    <p>item</p>
-                </div> 
-                <div class="product">
-                    <p>item</p>
-                </div> 
-            </div>
+        <div class="p3Bg">
+            <section id="productPage">
+                <div href="productPage" class="p3Items">
+
+                    <div class="product">
+
+                        <div class="productBoxL">
+                                <img src="images/armborstPic.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">crossbow</div>
+                                <div class="productInfo">
+                                    <h4>A crossbow model for all your crossbow needs, includes materials, armature and animations</h3>
+                                    <h2>Price: <span class="shopItemPrice">$5.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="productBoxL">
+                                <img src="images/BarrelPic.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">barrel</div>
+                                <div class="productInfo">
+                                    <h4>Barrels are for barrelrolling. Round and around and around and around we go. Includes a lot of liqour</h3>
+                                    <h2>Price: <span class="shopItemPrice">$2.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="productBoxL">
+                                <img src="images/chessPic2.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">chess</div>
+                                <div class="productInfo">
+                                    <h4>Check mate. Perfect for 3D printing, includes pawn, bishop, king, queen, rook, HORSE, battlefield, cheats and a pair of socks</h3>
+                                    <h2>Price: <span class="shopItemPrice">$8.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="productBoxL">
+                                <img src="images/Human2.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">human</div>
+                                <div class="productInfo">
+                                    <h4>This model has got it all, a fully funcioning armature with auto placing legs, pointable joints, clothes and a skin material</h3>
+                                    <h2>Price: <span class="shopItemPrice">$209.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="productBoxL">
+                                <img src="images/shopPic2.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">shop front</div>
+                                <div class="productInfo">
+                                    <h4>Kinda cool. It is what it is. Buy this with the player model and you can have a shop owner too</h3>
+                                    <h2>Price: <span class="shopItemPrice">$4.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="productBoxL">
+                                <img src="images/potPic.jpg" class="itemPic shopItemImage">
+                                <div class="shopItemTitle" style="display: none;">pot</div>
+                                <div class="productInfo">
+                                    <h4>This is a pot. There is nothing more to it. It has a few materials coming with it, clay, porcelain and green ceramic</h3>
+                                    <h2>Price: <span class="shopItemPrice">$2.9</span></h2>
+                                </div>
+                        </div>
+                        <div class="productBoxR">
+                            <button class="shopButton addToCart">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+
+    <section id="contactPage">
+        <div class="contactContainer">
+            <div class="contactBox">
+                <h1>Contact</h1>
+                <h3>For any questions or suggestions, please contact us at:</h3>
+                <h3> <a href="mailto: cubeModels.gmail.com" style="color:white;text-decoration: underline;">cubeModels.gmail.com</a></h3>
+            </div>
+            <div class="socialMediaBox">
+                <h1>Follow us</h1>
+                <h3>On our social media pages</h3>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png" class="socialMediaIcon"></a>
+                    <a href="https://www.instagram.com/"><img src="images/instagram.png" class="socialMediaIcon"></a>
+                    <a href="https://www.twitter.com/"><img src="images/twitter.png" class="socialMediaIcon"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
