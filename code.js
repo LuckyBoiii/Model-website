@@ -16,9 +16,11 @@ function resizeFunction() {
 // cart
 function openCart() {
   document.getElementById("cart").style.right = 0
+  document.getElementById("cart").style.boxShadow = "-3px 0px 10px 0px rgba(0, 0, 0, 0.589)"
 }
 function closeCart() {
   document.getElementById("cart").style.right = "-100%"
+  document.getElementById("cart").style.boxShadow = "none"
 }
 
 //cart working JS
